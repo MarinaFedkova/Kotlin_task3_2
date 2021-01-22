@@ -1,5 +1,5 @@
 fun main() {
-    countComission("Vk Pay", 410_000, 5_000, 2_000)
+    countComission("Maestro", 80_000, 5_000, 1_000)
 }
 
 fun countComission(
@@ -9,13 +9,13 @@ fun countComission(
     amount: Int
 ) {
     when (cardType) {
-        "Mastercard", "Maestro" -> countComissionMastercardNaestro(amount, totalAmountOfMonth, totalAmountOfDay)
+        "Mastercard", "Maestro" -> countComissionMastercardMaestro(amount, totalAmountOfMonth, totalAmountOfDay)
         "Visa", "Мир" -> countComissionVisaMir(amount, totalAmountOfMonth, totalAmountOfDay)
         "Vk Pay" -> countComissionVkPay(totalAmountOfMonth, totalAmountOfDay)
     }
 }
 
-fun countComissionMastercardNaestro(
+fun countComissionMastercardMaestro(
     amount: Int,
     totalAmountOfMonth: Int = 0,
     totalAmountOfDay: Int = 0,
